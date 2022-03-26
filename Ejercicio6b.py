@@ -1,32 +1,21 @@
-
 class Alumno:
 
     nombre = None
     nota = None
 
-    def Nombre(self, nombre):
-        self.nombre = nombre
-        return nombre
+    def anombre(self, nombre):
+        print(nombre)
 
-    def Nota(self, nota):
-        self.nota = nota
-        return nota
+    def anota(self, nota):
+        if 5 <= nota <= 10:
+            print('esta aprobado con un', nota)
+        elif nota > 10:
+            print('introduce un numero del 0 al 10')
+        else:
+            print('esta suspenso con un', nota)
 
     def __init__(self, nombre, nota):
-        self.nombre = nombre
-        self.nota = nota
+        self.anombre(nombre)
+        self.anota(nota)
 
-
-nombre = input('nombre alumno: ')
-nota = float(input('nota alumno: '))
-a = Alumno(nombre, nota)
-
-if 5 <= nota <= 10:
-    print(nombre, 'está aprobado', 'con un : ', nota)
-elif nota >= 10:
-    print('Nota no valida')
-else:
-    print(nombre, 'está suspenso', 'con un : ', nota)
-
-
-
+a = Alumno('paco', 10)
