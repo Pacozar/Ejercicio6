@@ -3,10 +3,10 @@ class Alumno:
     nombre = None
     nota = None
 
-    def anombre(self, nombre):
+    def obtenernombre(self, nombre):
         print(nombre)
 
-    def anota(self, nota):
+    def obtenernota(self, nota):
         if 5 <= nota <= 10:
             print('esta aprobado con un', nota)
         elif nota > 10:
@@ -15,7 +15,9 @@ class Alumno:
             print('esta suspenso con un', nota)
 
     def __init__(self, nombre, nota):
-        self.anombre(nombre)
-        self.anota(nota)
+        self.obtenernombre(nombre)
+        self.obtenernota(nota)
 
-a = Alumno('paco', 10)
+alumno1 = Alumno('paco', 10)
+alumno1.obtenernombre('paco')
+alumno1.obtenernota(6)
